@@ -8,8 +8,22 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.3.5",
+    "classnames": "^2.2.6",
+    "next": "9.3.4",
+    "next-seo": "^4.4.0",
+    "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "tailwindcss/custom-forms",
+    "@types/node": "^13.11.1",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^16.9.34",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "styled-jsx-plugin-postcss": "^2.0.1",
+    "tailwindcss": "^1.2.0",
+    "typescript": "^3.8.3"
   }
 }

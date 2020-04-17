@@ -1,0 +1,73 @@
+:root {
+  --page-primary: theme('colors.white');
+  --page-secondary: theme('colors.gray.100');
+
+  --fg-primary: theme('colors.gray.900');
+  --fg-secondary: theme('colors.gray.600');
+
+  --fg-accent: theme('colors.purple.600');
+  --fg-accent-hover: theme('colors.purple.400');
+
+  --fg-accent-boldest: theme('colors.orange.800');
+  --fg-accent-weakest: theme('colors.orange.200');
+}
+
+::selection {
+  @apply bg-orange-100 text-orange-900;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-primary: theme('colors.black');
+    --page-secondary: theme('colors.gray.700');
+
+    --fg-primary: theme('colors.orange.100');
+    --fg-secondary: theme('colors.gray.300');
+
+    --fg-accent: theme('colors.orange.500');
+    --fg-accent-hover: theme('colors.orange.400');
+
+    --fg-accent-boldest: theme('colors.purple.200');
+    --fg-accent-weakest: theme('colors.gray.900');
+  }
+
+  ::selection {
+    @apply bg-gray-600 text-purple-100;
+  }
+}
+
+body {
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  font-weight: inherit;
+  text-rendering: optimizeLegibility;
+  appearance: none;
+  @apply antialiased appearance-none;
+}
+
+html {
+  display: flex;
+  max-height: 100%;
+  max-width: 100%;
+  @apply leading-relaxed;
+  @apply bg-page-primary text-fg-primary;
+  @apply font-sans antialiased;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  @apply text-lg;
+
+  @screen sm {
+    @apply text-base;
+  }
+}
+
+#__next {
+  height: 100%;
+}
