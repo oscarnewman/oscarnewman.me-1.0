@@ -83,5 +83,13 @@ const Projects = () => (
       description="Collaboration projet to help students carpool to and from Providence and Boston airports during breaks."
       link="https://taketuctuc.com"
     />
+
+    <VSpacer size={6} />
+
+    <Project
+      title="Montrose Burdette"
+      description="A simple showcase site for a local architecture and development firm."
+      link="http://montroseburdette.com"
+    />
   </>
 )
