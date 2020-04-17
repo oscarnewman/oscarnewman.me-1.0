@@ -6,7 +6,7 @@ import '~/styles/nprogress.css'
 import '~/styles/tailwind.css'
 import '~/styles/theme.css'
 import seo from '~/util/seo.default'
-
+import withGA from 'next-ga'
 class BaseApp extends App {
   constructor(props) {
     super(props)
@@ -31,4 +31,4 @@ class BaseApp extends App {
   }
 }
 
-export default BaseApp
+export default withGA('UA-163880946-1', Router)(BaseApp)
