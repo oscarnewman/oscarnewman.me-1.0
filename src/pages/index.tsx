@@ -12,7 +12,7 @@ export default function Home() {
       <H1>Howdy, I'm Oscar.</H1>
       <VSpacer size={8}></VSpacer>
       <P>
-        I'm a senior at Brown University studying Computer Science and Machine
+        I'm a junior at Brown University studying Computer Science and Machine
         Learning (officially), and Healthcare Policy (unofficially). Raised in
         Austin, Texas.
       </P>
@@ -21,6 +21,7 @@ export default function Home() {
       <Link to="/OscarNewman.CV.2020.pdf" external>
         Latest CV <span className="opacity-50">→</span>
       </Link>
+      <VSpacer size={1} />
       <Link to="http://github.com/oscarnewman" external>
         Github <span className="opacity-50">→</span>
       </Link>
@@ -38,7 +39,7 @@ export default function Home() {
         current
       />
 
-      <VSpacer size={4} />
+      <VSpacer size={6} />
 
       <Project
         title="TucTuc | Ride Pooling for Students"

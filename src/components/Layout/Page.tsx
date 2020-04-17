@@ -26,7 +26,7 @@ const InnerPageContainer = ({ children }) => (
   <div
     className={cn(
       'flex flex-col items-start justify-start flex-grow w-full',
-      'py-32',
+      'py-20 md:py-32',
     )}
   >
     {children}

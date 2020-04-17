@@ -36,9 +36,6 @@
   }
 }
 
-body {
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   font-weight: inherit;
@@ -64,7 +61,7 @@ body {
   @apply text-lg;
 
   @screen sm {
-    @apply text-base;
+    @apply text-lg;
   }
 }
 
