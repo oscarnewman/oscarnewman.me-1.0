@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import Footer from '../Footer'
 
 interface Props {
   withHeader?: boolean
@@ -7,6 +8,7 @@ interface Props {
 export const Page: React.SFC<Props> = ({ children, withHeader = false }) => (
   <PageContainer>
     <InnerPageContainer>{children}</InnerPageContainer>
+    <Footer />
   </PageContainer>
 )
 

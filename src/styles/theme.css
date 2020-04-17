@@ -3,7 +3,7 @@
   --page-secondary: theme('colors.gray.100');
 
   --fg-primary: theme('colors.gray.900');
-  --fg-secondary: theme('colors.gray.600');
+  --fg-secondary: theme('colors.gray.400');
 
   --fg-accent: theme('colors.purple.600');
   --fg-accent-hover: theme('colors.purple.400');
@@ -22,7 +22,7 @@
     --page-secondary: theme('colors.gray.700');
 
     --fg-primary: theme('colors.orange.100');
-    --fg-secondary: theme('colors.gray.300');
+    --fg-secondary: theme('colors.gray.400');
 
     --fg-accent: theme('colors.orange.500');
     --fg-accent-hover: theme('colors.orange.400');

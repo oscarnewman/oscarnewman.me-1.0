@@ -24,3 +24,7 @@ export const H6 = ({ children }) => (
 )
 
 export const P = ({ children }) => <p className="md:text-lg">{children}</p>
+
+export const Small = ({ children }) => (
+  <p className="text-base font-medium text-fg-secondary">{children}</p>
+)
