@@ -59,6 +59,15 @@ const Projects = () => (
     <VSpacer size={2} />
 
     <Project
+      title="The Telehealth Report"
+      description="An 15k word analysis of the Telehealth industry, its history, its efficacy in cost savings and outcomes, and market opportunities moving forward."
+      link="/Telehealth.pdf"
+      current
+    />
+
+    <VSpacer size={6} />
+
+    <Project
       title="Pillar | A Better Way to Give"
       description="A smart, automated giving platform that uses expert advice to build
     you a dynamic giving portfolio, keep it up to date, and maximize your
