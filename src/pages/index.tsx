@@ -34,9 +34,8 @@ export default function Home() {
 
       <Project
         title="DinoCodes | Highly Secure QR Codes "
-        description="A secure type of scannable code that embeds time, identity, and cryptographic signatures. Perfect for secure applications like ticketing and location verification."
-        link="https://github.com/oscarnewman/KoalaNet"
-        soon
+        description="A secure type of scannable code that embeds time, identity, and location. Perfect for secure applications like ticketing and location verification."
+        link="https://dino-demo.now.sh"
         course="CS 1430 Computer Vision"
       />
 
