@@ -10,7 +10,7 @@ export const Link: React.SFC<Props> = ({ children, external = false, to }) => {
     <a
       href={to}
       target={external ? '__BLANK' : ''}
-      className="text-fg-accent font-medium hover:text-fg-accent-hover  transition-colors duration-150"
+      className="block text-fg-accent font-medium hover:text-fg-accent-hover  transition-colors duration-150"
     >
       {children}
     </a>
