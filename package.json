@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@oscarnewman/twist": "^0.0.1",
+    "@oscarnewman/twist": "^0.0.2",
     "classnames": "^2.2.6",
     "next": "^9.4.1-canary.9",
     "next-ga": "^2.3.4",

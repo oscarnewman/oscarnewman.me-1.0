@@ -1034,10 +1034,10 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.4.1-canary.9.tgz#712bfb0d27c894deb0d6e30c7b16980211a34fe2"
   integrity sha512-R3mLetLyi8oNyMGpNcxBmfUisneVJxAXSSbaymzILPRjG4Z/RemCEU3W70O2NWH1J4gbWes2RQ67RuyutLZREA==
 
-"@oscarnewman/twist@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@oscarnewman/twist/-/twist-0.0.1.tgz#1fb189ccf3230d09c37c10c65d2813d2cdd14438"
-  integrity sha512-coYG9WruqZpUJUjZ39uF43bqGvNCb0Uzx8MW5ebQ54CNuyatPIcI7qFxQC/GSyApZ/7UTaMT+/2cUZK5KN7PmQ==
+"@oscarnewman/twist@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@oscarnewman/twist/-/twist-0.0.2.tgz#5c21fffedd69a9dcae4e9caa5ac9149b4069061c"
+  integrity sha512-0jufIauFNZ4nx17Of3SLdS/UidKlkUg21yB6BDXemWg9bLoExdjhiINvJ8hGHfEc9vIcjuhQ6s5nnvc9t4VtHg==
   dependencies:
     classnames "^2.2.6"
 
