@@ -1043,7 +1043,8 @@
 
 "@tailwindcss/custom-forms@tailwindcss/custom-forms":
   version "0.2.1"
-  resolved "https://codeload.github.com/tailwindcss/custom-forms/tar.gz/43f1075d08cc116ad546040a8959a11addacfee5"
+  uid bfe21f1094dda5918bb4bba656f62dd94f5d91f7
+  resolved "https://codeload.github.com/tailwindcss/custom-forms/tar.gz/bfe21f1094dda5918bb4bba656f62dd94f5d91f7"
   dependencies:
     lodash "^4.17.11"
     mini-svg-data-uri "^1.0.3"
