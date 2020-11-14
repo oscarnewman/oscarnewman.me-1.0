@@ -11,18 +11,22 @@ export default function Home() {
       <Stack space={8}>
         <Stack space={8}>
           <Stack space={6}>
-            <H1>🍤</H1>
+            <H1>🌵</H1>
             <H1>Howdy, I'm Oscar.</H1>
           </Stack>
 
           <P>
             I'm a junior at Brown University studying Computer Science and
             Machine Learning (officially), and Healthcare Policy (unofficially).
-            Raised in Austin, Texas.
+            I'm also a full-stack engineer at{' '}
+            <Link to="https://marblekiosk.com" external className="inline">
+              Marble
+            </Link>
+            . Raised in Austin, Texas.
           </P>
 
           <Stack space={1}>
-            <Link to="/OscarNewman.CV.2020.pdf" external>
+            <Link to="/OscarNewman.CV.10.2020.pdf" external>
               Latest CV <span className="opacity-50">→</span>
             </Link>
             <Link to="http://github.com/oscarnewman" external>
@@ -73,9 +77,8 @@ const Projects = () => (
   <LinkListSection title="Projects">
     <Project
       title="The Telehealth Report"
-      description="An 15k word analysis of the Telehealth industry, its history, its efficacy in cost savings and outcomes, and market opportunities moving forward."
+      description="An deep-dive analysis of the Telehealth industry, its history, its efficacy in cost savings and outcomes, and market opportunities moving forward."
       link="/Telehealth.pdf"
-      current
     />
 
     <Project
@@ -84,14 +87,12 @@ const Projects = () => (
     you a dynamic giving portfolio, keep it up to date, and maximize your
     impact."
       link="https://pillar.gives"
-      current
     />
 
     <Project
       title="oscarnewman.me"
       description="This site! Built with NextJS and Typescript. A bit of a testing ground for new things I want to try out."
       link="https://github.com/oscarnewman/oscarnewman.me"
-      current
     />
 
     <Project
