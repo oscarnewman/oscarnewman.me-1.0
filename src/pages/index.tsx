@@ -16,9 +16,9 @@ export default function Home() {
           </Stack>
 
           <P>
-            I'm a junior at Brown University studying Computer Science and
+            I&apos;m a junior at Brown University studying Computer Science and
             Machine Learning (officially), and Healthcare Policy (unofficially).
-            I'm also a full-stack engineer at{' '}
+            I&apos;m also a full-stack engineer at
             <Link to="https://marblekiosk.com" external className="inline">
               Marble
             </Link>
