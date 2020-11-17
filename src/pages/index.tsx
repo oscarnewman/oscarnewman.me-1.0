@@ -77,7 +77,7 @@ const Projects = () => (
   <LinkListSection title="Projects">
     <Project
       title="The Telehealth Report"
-      description="An deep-dive analysis of the Telehealth industry, its history, its efficacy in cost savings and outcomes, and market opportunities moving forward."
+      description="A deep-dive analysis of the Telehealth industry, its history, its efficacy in cost savings and outcomes, and market opportunities moving forward."
       link="/Telehealth.pdf"
     />
 
