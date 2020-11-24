@@ -12,13 +12,13 @@ export default function Home() {
         <Stack space={8}>
           <Stack space={6}>
             <H1>🌵</H1>
-            <H1>Howdy, I'm Oscar.</H1>
+            <H1>Howdy, I&apos;m Oscar.</H1>
           </Stack>
 
           <P>
             I&apos;m a junior at Brown University studying Computer Science and
             Machine Learning (officially), and Healthcare Policy (unofficially).
-            I&apos;m also a full-stack engineer at
+            I&apos;m also a full-stack engineer at{' '}
             <Link to="https://marblekiosk.com" external className="inline">
               Marble
             </Link>
@@ -99,12 +99,6 @@ const Projects = () => (
       title="TucTuc | Ride Pooling for Students"
       description="Collaboration projet to help students carpool to and from Providence and Boston airports during breaks."
       link="https://taketuctuc.com"
-    />
-
-    <Project
-      title="Montrose Burdette"
-      description="A simple showcase site for a local architecture and development firm."
-      link="http://montroseburdette.com"
     />
   </LinkListSection>
 )
