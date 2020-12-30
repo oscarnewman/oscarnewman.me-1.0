@@ -26,7 +26,7 @@ export default function Home() {
           </P>
 
           <Stack space={1}>
-            <Link to="/OscarNewman.CV.10.2020.pdf" external>
+            <Link to="/OscarNewman.CV.11.24.20.pdf" external>
               Latest CV <span className="opacity-50">→</span>
             </Link>
             <Link to="http://github.com/oscarnewman" external>
