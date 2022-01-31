@@ -16,17 +16,18 @@ export default function Home() {
           </Stack>
 
           <P>
-            I&apos;m a junior at Brown University studying Computer Science and
-            Machine Learning (officially), and Healthcare Policy (unofficially).
-            I&apos;m also a full-stack engineer at{' '}
-            <Link to="https://marblekiosk.com" external className="inline">
-              Marble
-            </Link>
-            . Raised in Austin, Texas.
+            I&apos;m a software engineer at{' '}
+            <Link to="https://solvhealth.com" external className="inline">
+              Solv
+            </Link>{' '}
+            building great consumer healthcare experiences. I recently graduated
+            from Brown University studying Computer Science and Machine Learning
+            (officially), and Healthcare Policy (unofficially). Raised in
+            Austin, Texas.
           </P>
 
           <Stack space={1}>
-            <Link to="/OscarNewman.CV.11.24.20.pdf" external>
+            <Link to="/OscarNewman.CV.1.30.2022.pdf" external>
               Latest CV <span className="opacity-50">→</span>
             </Link>
             <Link to="http://github.com/oscarnewman" external>
