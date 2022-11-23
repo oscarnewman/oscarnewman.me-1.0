@@ -66,7 +66,7 @@ const CourseWork = () => (
 
     <Project
       title="KoalaNet | Deep Learning Night Vision"
-      description="A PyTorch reimplementation of a convolutional autoencoder to reexpose near-black images, trained on GCP for 40 hours. Adapted from Learning to See In The Dark (Chen et al. 2018)."
+      description="A PyTorch re-implementation of a convolution's autoencoder to re-expose near-black images, trained on GCP for 40 hours. Adapted from Learning to See In The Dark (Chen et al. 2018)."
       link="https://github.com/oscarnewman/KoalaNet"
       course="CS 1420 Deep Learning"
     />
@@ -97,7 +97,7 @@ const Projects = () => (
 
     <Project
       title="TucTuc | Ride Pooling for Students"
-      description="Collaboration projet to help students carpool to and from Providence and Boston airports during breaks."
+      description="Collaboration project to help students carpool to and from Providence and Boston airports during breaks."
       link="https://taketuctuc.com"
     />
   </LinkListSection>
