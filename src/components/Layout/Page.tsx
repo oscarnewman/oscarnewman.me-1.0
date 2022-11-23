@@ -5,12 +5,14 @@ interface Props {
   withHeader?: boolean
 }
 
-export const Page: React.SFC<Props> = ({ children, withHeader = false }) => (
-  <PageContainer>
-    <InnerPageContainer>{children}</InnerPageContainer>
-    <Footer />
-  </PageContainer>
-)
+export function Page({ children, withHeader = false }) {
+  return (
+    <PageContainer>
+      <InnerPageContainer>{children}</InnerPageContainer>
+      <Footer />
+    </PageContainer>
+  )
+}
 
 const PageContainer = ({ children }) => (
   <div

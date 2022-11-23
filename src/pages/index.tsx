@@ -1,4 +1,3 @@
-import { Stack } from '@oscarnewman/twist'
 import { ReactNode } from 'react'
 import { Page } from '~/components/Layout/Page'
 import { Project } from '~/components/Project'
@@ -8,12 +7,12 @@ import { Link } from '~/components/Typography/Link'
 export default function Home() {
   return (
     <Page>
-      <Stack space={8}>
-        <Stack space={8}>
-          <Stack space={6}>
+      <div className="space-y-8">
+        <div className="space-y-8">
+          <div className="space-y-6">
             <H1>🌵</H1>
             <H1>Howdy, I&apos;m Oscar.</H1>
-          </Stack>
+          </div>
 
           <P>
             I&apos;m a software engineer at{' '}
@@ -26,19 +25,19 @@ export default function Home() {
             Austin, Texas.
           </P>
 
-          <Stack space={1}>
+          <div className="space-y-1">
             <Link to="/OscarNewman.CV.11.23.2022.pdf" external>
               Latest CV <span className="opacity-50">→</span>
             </Link>
             <Link to="http://github.com/oscarnewman" external>
               Github <span className="opacity-50">→</span>
             </Link>
-          </Stack>
-        </Stack>
+          </div>
+        </div>
 
         <Projects />
         <CourseWork />
-      </Stack>
+      </div>
     </Page>
   )
 }
@@ -50,10 +49,10 @@ const LinkListSection = ({
   title: string
   children: ReactNode
 }) => (
-  <Stack space={2}>
+  <div className="space-y-2">
     <H5>{title}</H5>
-    <Stack space={6}>{children}</Stack>
-  </Stack>
+    <div className="space-y-6">{children}</div>
+  </div>
 )
 
 const CourseWork = () => (

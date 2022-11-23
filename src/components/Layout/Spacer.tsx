@@ -20,10 +20,10 @@ interface Props {
     | 64
 }
 
-export const VSpacer: React.SFC<Props> = ({ size }) => (
-  <div className={`h-${size}`}></div>
-)
+export function VSpacer({ size }: Props) {
+  return <div className={`h-${size}`} />
+}
 
-export const HSpacer: React.SFC<Props> = ({ size }) => (
-  <div className={`w-${size}`}></div>
-)
+export function HSpacer({ size }: Props) {
+  return <div className={`w-${size}`} />
+}

@@ -24,11 +24,11 @@ class BaseApp extends App {
     const { Component, pageProps } = this.props
     return (
       <>
-        <DefaultSeo {...seo}></DefaultSeo>
+        <DefaultSeo {...seo} />
         <Component {...pageProps} />
       </>
     )
   }
 }
 
-export default withGA('UA-163880946-1', Router)(BaseApp)
+export default BaseApp
