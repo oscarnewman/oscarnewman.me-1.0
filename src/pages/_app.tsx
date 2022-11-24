@@ -27,7 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
     })
 
     function onRouteChangeComplete() {
-      console.log('fahtom tracking')
       Fathom.trackPageview()
     }
     // Record a pageview when route changes
