@@ -29,7 +29,18 @@ export function Link({
   )
 
   if (!external) {
-    return <NextLink href={to}>{InnerTag}</NextLink>
+    return (
+      <NextLink
+        href={to}
+        target={external ? '__BLANK' : ''}
+        className={classNames(
+          'block text-fg-accent font-medium hover:text-fg-accent-hover transition-colors duration-150',
+          className,
+        )}
+      >
+        {children}
+      </NextLink>
+    )
   }
 
   return InnerTag

@@ -16,13 +16,7 @@ function pathToArticlesDir() {
   return join(process.cwd(), 'src/pages/articles')
 }
 
-function pathToArticle(fileName: string) {
-  console.log(process.cwd())
-  return join('./src/pages/articles', fileName)
-}
-
 async function importArticle(articleFilename): Promise<Article> {
-  console.log(pathToArticle(articleFilename))
   let { meta, default: component } = await import(
     `../pages/articles/${articleFilename}`
   )

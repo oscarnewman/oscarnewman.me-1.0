@@ -12,10 +12,9 @@ type Props = {
 
 export function ArticleLayout({ children, meta }: Props) {
   return (
-    <div className="bg-amber-50/50 dark:bg-stone-900 text-amber-900 dark:text-amber-100">
-      <Nav />
-
-      <div className="flex-1 container py-12">
+    <div className="">
+      <div className="flex-1 container py-12 space-y-12">
+        <Nav />
         <NextSeo
           title={meta.title}
           openGraph={{
@@ -24,6 +23,7 @@ export function ArticleLayout({ children, meta }: Props) {
               authors: ['Oscar Newman'],
               publishedTime: meta.date,
             },
+            description: meta.description,
             siteName: 'Oscar Newman',
             url: `https://oscarnewman.me/posts/${meta.slug}`,
             title: meta.title,
@@ -32,22 +32,20 @@ export function ArticleLayout({ children, meta }: Props) {
         />
         <article>
           <header className="flex flex-col space-y-4">
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-100 sm:text-4xl">
+            <h1 className="text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-100 sm:text-4xl">
               {meta.title}
             </h1>
             <time
               dateTime={meta.date}
-              className="flex items-center text-base text-amber-900 dark:text-stone-500"
+              className="flex items-center text-base text-fg-secondary  "
             >
               <span className="">{formatDate(meta.date)}</span>
             </time>
           </header>
           <div
             className={clsx(
-              'prose text-amber-900',
-              ' prose-code:text-amber-900 prose-pre:bg-stone-900',
-              'dark:text-amber-100 dark:prose-code:text-amber-300 dark:prose-pre:bg-black',
-              'font-serif dark:prose-invert mt-8',
+              'prose',
+              'dark:prose-invert dark:prose-pre:bg-zinc-900 mt-8',
             )}
           >
             {children}

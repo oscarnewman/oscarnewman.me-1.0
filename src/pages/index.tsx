@@ -1,11 +1,17 @@
+import { GetStaticProps } from 'next'
 import { ReactNode } from 'react'
 import { Page } from '~/components/Layout/Page'
-import { ModeToggle } from '~/components/ModeToggle'
 import { Project } from '~/components/Project'
 import { H1, H5, P } from '~/components/Typography'
 import { Link } from '~/components/Typography/Link'
+import { ArticleMeta, getAllArticles } from '~/lib/articles'
+import { formatDate } from '~/lib/date'
 
-export default function Home() {
+type Props = {
+  articles: ArticleMeta[]
+}
+
+export default function Home({ articles }: Props) {
   return (
     <Page>
       <div className="space-y-8">
@@ -35,6 +41,21 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        <LinkListSection title="Writing">
+          {articles.map((article) => (
+            <Project
+              title={article.title}
+              key={article.slug}
+              description={article.description}
+              link={`/articles/${article.slug}`}
+              course={formatDate(article.date)}
+            />
+          ))}
+          <Link to="/articles">
+            See all <span className="opacity-50">→</span>
+          </Link>
+        </LinkListSection>
 
         <Projects />
       </div>
@@ -84,3 +105,13 @@ const Projects = () => (
     />
   </LinkListSection>
 )
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
+  const articles = await getAllArticles()
+
+  return {
+    props: {
+      articles: articles.map((a) => a.meta).slice(0, 3),
+    },
+  }
+}

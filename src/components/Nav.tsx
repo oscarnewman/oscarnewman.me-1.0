@@ -5,13 +5,11 @@ type Props = {}
 
 function Nav(props: Props) {
   return (
-    <nav className="flex container mx-auto py-12 justify-between">
+    <nav className="flex justify-between">
       <Link href="/" className="flex font-bold gap-1">
         <div>🌵</div>
         <div>Oscar Newman</div>
       </Link>
-
-      <ModeToggle />
     </nav>
   )
 }
