@@ -47,6 +47,7 @@ export default function Home({ articles }: Props) {
             <Project
               title={article.title}
               key={article.slug}
+              internal
               description={article.description}
               link={`/articles/${article.slug}`}
               course={formatDate(article.date)}

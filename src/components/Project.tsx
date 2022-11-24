@@ -8,6 +8,7 @@ interface Props {
   description: string
   current?: boolean
   soon?: boolean
+  internal?: boolean
   course?: string
 }
 
@@ -17,6 +18,7 @@ export function Project({
   description,
   current = false,
   soon = false,
+  internal = false,
   course,
 }: Props) {
   return (
@@ -35,7 +37,7 @@ export function Project({
           )}
         </div>
         <div className="order-2">
-          <Link to={soon ? '#' : link} external={!soon}>
+          <Link to={soon ? '#' : link} external={!internal}>
             {title}
           </Link>
         </div>
