@@ -26,10 +26,10 @@ export function ArticleLayout({ children, meta }: Props) {
             },
             description: meta.description,
             siteName: 'Oscar Newman',
-            url: `https://oscarnewman.me/posts/${meta.slug}`,
+            url: `https://oscarnewman.me/articles/${meta.slug}`,
             title: meta.title,
           }}
-          canonical={`https://oscarnewman.me/posts/${meta.slug}`}
+          canonical={`https://oscarnewman.me/articles/${meta.slug}`}
         />
         <article>
           <header className="flex flex-col space-y-4">
