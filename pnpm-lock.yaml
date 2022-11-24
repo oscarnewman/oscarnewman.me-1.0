@@ -7,7 +7,6 @@ specifiers:
   '@mdx-js/react': ^2.1.5
   '@next/mdx': ^13.0.4
   '@oscarnewman/twist': ^0.0.2
-  '@tailwindcss/custom-forms': tailwindcss/custom-forms
   '@tailwindcss/typography': ^0.5.8
   '@types/classnames': ^2.3.1
   '@types/node': ^18.11.9
@@ -73,7 +72,6 @@ dependencies:
 devDependencies:
   '@mdx-js/loader': 2.1.5
   '@mdx-js/react': 2.1.5_react@18.2.0
-  '@tailwindcss/custom-forms': github.com/tailwindcss/custom-forms/8e6a6ace749a7fd29d2aa53e447762d11d326d25_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   '@types/classnames': 2.3.1
   '@types/node': 18.11.9
@@ -2674,11 +2672,6 @@ packages:
       space-separated-tokens: 1.1.5
     dev: false
 
-  /hex-rgb/4.3.0:
-    resolution: {integrity: sha512-Ox1pJVrDCyGHMG9CFg1tmrRUMRPRsAWYc/PinY0XzJU4K7y7vjNoLKIQ7BR5UJMCxNN8EM1MNDmHWA/B3aZUuw==}
-    engines: {node: '>=6'}
-    dev: true
-
   /homedir-polyfill/1.0.3:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
@@ -3787,11 +3780,6 @@ packages:
     resolution: {integrity: sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==}
     engines: {node: '>=4'}
     dev: false
-
-  /mini-svg-data-uri/1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
-    dev: true
 
   /minimatch/3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -5470,10 +5458,6 @@ packages:
     dependencies:
       is-number: 7.0.0
 
-  /traverse/0.6.7:
-    resolution: {integrity: sha512-/y956gpUo9ZNCb99YjxG7OaslxZWHfCHAUUfshwqOXmxUIvqLjVO581BT+gM59+QV9tFe6/CGG53tsA1Y7RSdg==}
-    dev: true
-
   /trim-lines/3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
 
@@ -5943,18 +5927,3 @@ packages:
 
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
-
-  github.com/tailwindcss/custom-forms/8e6a6ace749a7fd29d2aa53e447762d11d326d25_tailwindcss@3.2.4:
-    resolution: {commit: 8e6a6ace749a7fd29d2aa53e447762d11d326d25, repo: git+ssh://git@github.com/tailwindcss/custom-forms.git, type: git}
-    id: github.com/tailwindcss/custom-forms/8e6a6ace749a7fd29d2aa53e447762d11d326d25
-    name: '@tailwindcss/custom-forms'
-    version: 0.2.1
-    peerDependencies:
-      tailwindcss: ^1.0
-    dependencies:
-      hex-rgb: 4.3.0
-      lodash: 4.17.21
-      mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.2.4
-      traverse: 0.6.7
-    dev: true
