@@ -42,8 +42,7 @@ function Articles({ articles }: Props) {
             Notes to self
           </h1>
           <p className="">
-            A collection of notes on things I've learned, to practice writing
-            and use as a reference for myself.
+            A public notebook of tricks I've learned and solutions I've found.
           </p>
         </header>
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
