@@ -13,7 +13,7 @@ type Props = {
 
 export function ArticleLayout({ children, meta }: Props) {
   return (
-    <div className="dark:bg-gray-900">
+    <div className="dark:bg-gray-900 flex-1 min-h-full">
       <div className="flex-1 container py-12 space-y-12">
         <Nav />
         <NextSeo
