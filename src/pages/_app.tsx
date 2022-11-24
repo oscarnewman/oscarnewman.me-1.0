@@ -23,11 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load('XWSBOSJU', {
-      includedDomains: [
-        'oscarnewman.me',
-        'www.oscarnewman.me',
-        'localhost:3000',
-      ],
+      includedDomains: ['oscarnewman.me'],
     })
 
     function onRouteChangeComplete() {
