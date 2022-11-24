@@ -80,6 +80,11 @@ const LinkListSection = ({
 const Projects = () => (
   <LinkListSection title="Projects">
     <Project
+      title="Comment Click | Comment and collaborate directly on your site"
+      description="Just like Figma and Google Docs—have discussions and give feedback where it matters, no more screenshots or third-party tools to wrangle."
+      link="https://comment.click?utm_source=oscarnewman.com&utm_medium=referral&utm_campaign=homepage"
+    />
+    <Project
       title="The Telehealth Report"
       description="A deep-dive analysis of the Telehealth industry, its history, its efficacy in cost savings and outcomes, and market opportunities moving forward."
       link="/Telehealth.pdf"
@@ -97,12 +102,6 @@ const Projects = () => (
       title="oscarnewman.me"
       description="This site! Built with NextJS and Typescript. A bit of a testing ground for new things I want to try out."
       link="https://github.com/oscarnewman/oscarnewman.me"
-    />
-
-    <Project
-      title="TucTuc | Ride Pooling for Students"
-      description="Collaboration project to help students carpool to and from Providence and Boston airports during breaks."
-      link="https://taketuctuc.com"
     />
   </LinkListSection>
 )
