@@ -1,6 +1,5 @@
 // default tw config
 const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -58,7 +57,6 @@ module.exports = {
           800: '#0C6B58',
           900: '#014D40',
         },
-        gray: colors.stone,
       },
       boxShadow: {
         float: '0 4px 14px 0 rgba(60,38,110,0.13)',

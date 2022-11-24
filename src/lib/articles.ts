@@ -7,6 +7,7 @@ export type Article = {
     date: string
     title: string
     description: string
+    published?: boolean
   }
   component: any
 }
@@ -16,7 +17,7 @@ function pathToArticlesDir() {
   return join(process.cwd(), 'src/pages/articles')
 }
 
-async function importArticle(articleFilename): Promise<Article> {
+async function importArticle(articleFilename): Promise<Article | null> {
   let { meta, default: component } = await import(
     `../pages/articles/${articleFilename}`
   )
@@ -33,7 +34,10 @@ export async function getAllArticles() {
 
   let articles = await Promise.all(articleFilenames.map(importArticle))
 
-  return articles.sort(
-    (a, z) => new Date(z.meta.date).getDate() - new Date(a.meta.date).getDate(),
-  )
+  return articles
+    .filter((a) => a.meta.published)
+    .sort(
+      (a, z) =>
+        new Date(z.meta.date).getDate() - new Date(a.meta.date).getDate(),
+    )
 }
