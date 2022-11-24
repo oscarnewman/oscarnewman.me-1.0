@@ -31,7 +31,6 @@
   "devDependencies": {
     "@mdx-js/loader": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
-    "@tailwindcss/custom-forms": "tailwindcss/custom-forms",
     "@tailwindcss/typography": "^0.5.8",
     "@types/classnames": "^2.3.1",
     "@types/node": "^18.11.9",
