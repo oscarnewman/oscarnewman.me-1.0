@@ -10,33 +10,29 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-None of us send secrets over Slack… right?
+I hate sending secrets and environment variables to my team. Sometimes we use
+[One time secret](https://onetimesecret.com), and sometimes (gasp) we send them
+via Slack. No matter what, I still get slack questions about
+`ERROR: 'STRIPE_KEY' is not defined` months after it was added.
 
-Regardless, as your team scales, making sure each new engineer has an up-to-date
-copy of the `.env` file is a pain. Worse—try adding a new secret, then figuring
-out how to securely share it with your whole team (and if your team is big, be
-prepared to answer questions in slack about `ERROR: 'STRIPE_KEY' is not defined`
-for at least a few months.
-
-Here’s the quick solution I use:
+There's a lot of potential solutions here, but here's my favorite:
 
 ## Setup
 
-Generate a secure team secret file. There’s a ton of ways to do this, but an
-easy one is with the `openssl` CLI:
+Generate a secure "team secret" file. This will be the key to encrypt and
+decrypt that everyone shares.
 
 ```bash
 openssl rand 256 -out team-secret.key
 ```
 
-Share `team-secret.key` with all new and current devs (Bonus points if you can
-get it pre-loaded via your MDM). Make sure everyone adds the absolute path to
-the file as `$TEAM_SECRET_KEY` somewhere in their Bash or ZSH RC files. Watch
-out—Having the absolute URL is required for the next step to work.
+Share `team-secret.key` with everyone (bonus points if you can get it pre-loaded
+with your MDM). Add `$TEAM_SECRET_KEY` to everyone's terminal pointing to the
+**absolute path** to this file.
 
 ```bash
 # ~/.zshrc | ~/.bashrc | ~/.bash_profile
-export $TEAM_SECRET_KEY=/absolute/path/to/the/file
+export $TEAM_SECRET_KEY=/Users/oscar/work/team-secret.key
 ```
 
 ## The scripts
@@ -63,6 +59,5 @@ env\:decrypt:
 	openssl aes-256-cbc -d -in .env.enc -out .env -pass file:$$TEAM_SECRET_KEY
 ```
 
-Finally, all you need to do is run `npm run env:encrypt`, check `.env.enc` into
-source control, and make your your team knows how to pull new versions of the
-`.env` when needed.
+Run `npm run env:encrypt`, check `.env.enc` into source control, and you're done
+(once you tell your team to pull the latest `env` file).

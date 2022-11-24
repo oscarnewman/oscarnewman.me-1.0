@@ -12,7 +12,7 @@ type Props = {
 
 export function ArticleLayout({ children, meta }: Props) {
   return (
-    <div className="">
+    <div className="dark:bg-gray-900">
       <div className="flex-1 container py-12 space-y-12">
         <Nav />
         <NextSeo
@@ -45,7 +45,7 @@ export function ArticleLayout({ children, meta }: Props) {
           <div
             className={clsx(
               'prose',
-              'dark:prose-invert dark:prose-pre:bg-zinc-900 mt-8',
+              'dark:prose-invert dark:prose-pre:bg-gray-800 mt-8',
             )}
           >
             {children}
