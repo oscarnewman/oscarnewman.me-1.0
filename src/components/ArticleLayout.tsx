@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { NextSeo } from 'next-seo'
 import { ReactNode } from 'react'
+import Footer from '~/components/Footer'
 import Nav from '~/components/Nav'
 import { Article } from '~/lib/articles'
 import { formatDate } from '~/lib/date'
@@ -52,6 +53,7 @@ export function ArticleLayout({ children, meta }: Props) {
           </div>
         </article>
       </div>
+      <Footer />
     </div>
   )
 }
