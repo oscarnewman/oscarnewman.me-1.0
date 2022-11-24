@@ -1,0 +1,68 @@
+import { ArticleLayout } from '~/components/ArticleLayout'
+
+export const meta = {
+  title:
+    'Safely share secrets and environment variables with your team using OpenSSL',
+  date: '2022-11-23',
+  description:
+    'Two small NPM scripts make it dead-simple to share secrets and environment variables with your team.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+None of us send secrets over Slack… right?
+
+Regardless, as your team scales, making sure each new engineer has an up-to-date
+copy of the `.env` file is a pain. Worse—try adding a new secret, then figuring
+out how to securely share it with your whole team (and if your team is big, be
+prepared to answer questions in slack about `ERROR: 'STRIPE_KEY' is not defined`
+for at least a few months.
+
+Here’s the quick solution I use:
+
+## Setup
+
+Generate a secure team secret file. There’s a ton of ways to do this, but an
+easy one is with the `openssl` CLI:
+
+```bash
+openssl rand 256 -out team-secret.key
+```
+
+Share `team-secret.key` with all new and current devs (Bonus points if you can
+get it pre-loaded via your MDM). Make sure everyone adds the absolute path to
+the file as `$TEAM_SECRET_KEY` somewhere in their Bash or ZSH RC files. Watch
+out—Having the absolute URL is required for the next step to work.
+
+```bash
+# ~/.zshrc | ~/.bashrc | ~/.bash_profile
+export $TEAM_SECRET_KEY=/absolute/path/to/the/file
+```
+
+## The scripts
+
+Add the following scripts to your repo. Here’s a couple versions for a
+`Makefile` or `package.json`, but the concept should be portable.
+
+**`package.json`**
+
+```tsx
+{
+	"env:encrypt": "openssl aes-256-cbc -in .env -out .env.enc -pass file:$TEAM_SECRET_KEY",
+	"env:decrypt": "openssl aes-256-cbc -d -in .env.enc -out .env -pass file:$TEAM_SECRET_KEY"
+}
+```
+
+**`Makefile`**
+
+```makefile
+env\:encrypt:
+	openssl aes-256-cbc -in .env -out .env.enc -pass file:$$TEAM_SECRET_KEY
+
+env\:decrypt:
+	openssl aes-256-cbc -d -in .env.enc -out .env -pass file:$$TEAM_SECRET_KEY
+```
+
+Finally, all you need to do is run `npm run env:encrypt`, check `.env.enc` into
+source control, and make your your team knows how to pull new versions of the
+`.env` when needed.

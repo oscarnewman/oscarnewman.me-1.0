@@ -1,35 +1,20 @@
+// default tw config
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{jsx,js,tsx,ts,html}'],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
-    },
-    customForms: (theme) => ({
-      default: {
-        'input, textarea, multiselect': {
-          // backgroundColor: '#F0F4F8',
-          boxShadow: theme('boxShadow.default'),
-          // border: 'none',
-          borderColor: theme('colors.gray.100'),
-        },
-      },
-      dark: {
-        'input, textarea, multiselect': {
-          backgroundColor: theme('colors.gray.800'),
-          boxShadow: theme('boxShadow.default'),
-          borderColor: theme('colors.gray.700'),
-          '&:focus': {
-            // borderColor: theme('colors.purple.500'),
-            // boxShadow: `0 0 0 2px ${theme('colors.puprle.400')}`,
-          },
-        },
-      },
-    }),
-    extend: {
+      padding: '24px',
       screens: {
-        light: { raw: '(prefers-color-scheme: light)' },
-        dark: { raw: '(prefers-color-scheme: dark)' },
+        sm: '40rem',
       },
+    },
+    extend: {
       colors: {
         page: {
           primary: 'var(--page-primary)',
@@ -73,32 +58,12 @@ module.exports = {
           800: '#0C6B58',
           900: '#014D40',
         },
-        gray: {
-          25: '#f8fafc',
-          50: '#F0F4F8',
-          100: '#D9E2EC',
-          200: '#BCCCDC',
-          300: '#9FB3C8',
-          400: '#829AB1',
-          500: '#627D98',
-          600: '#486581',
-          700: '#334E68',
-          800: '#243B53',
-          900: '#102A43',
-        },
+        gray: colors.stone,
       },
       boxShadow: {
         float: '0 4px 14px 0 rgba(60,38,110,0.13)',
       },
     },
   },
-  variants: {
-    shadow: ['active'],
-    backgroundColor: ['hover', 'focus', 'responsive', 'active', 'disabled'],
-    border: ['responsive'],
-  },
-  plugins: [
-    require('@tailwindcss/custom-forms'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/typography')],
 }

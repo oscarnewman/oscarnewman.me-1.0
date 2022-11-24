@@ -16,25 +16,25 @@
   @apply bg-orange-100 text-orange-900;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-primary: theme('colors.black');
-    --page-secondary: theme('colors.gray.700');
+:root.dark,
+.dark,
+.dark * {
+  --page-primary: theme('colors.black');
+  --page-secondary: theme('colors.gray.700');
 
-    --fg-primary: theme('colors.orange.100');
-    --fg-secondary: theme('colors.gray.400');
+  --fg-primary: theme('colors.orange.100');
+  --fg-secondary: theme('colors.gray.400');
 
-    --fg-accent: theme('colors.orange.500');
-    --fg-accent-hover: theme('colors.orange.400');
+  --fg-accent: theme('colors.orange.500');
+  --fg-accent-hover: theme('colors.orange.400');
 
-    --fg-accent-boldest: theme('colors.purple.200');
-    --fg-accent-weakest: theme('colors.gray.900');
-  }
-
-  ::selection {
-    @apply bg-gray-600 text-purple-100;
-  }
+  --fg-accent-boldest: theme('colors.purple.200');
+  --fg-accent-weakest: theme('colors.gray.900');
 }
+/* 
+.dark ::selection {
+  @apply bg-gray-600 text-purple-100;
+} */
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -49,7 +49,7 @@ html {
   max-height: 100%;
   max-width: 100%;
   @apply leading-relaxed;
-  @apply bg-page-primary text-fg-primary;
+  /* @apply bg-page-primary text-fg-primary; */
   @apply font-sans antialiased;
 }
 
@@ -59,6 +59,7 @@ body {
   height: 100%;
 
   @apply text-lg sm:text-lg;
+  @apply text-black dark:text-white;
 }
 
 #__next {

@@ -8,12 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.1.5",
-    "@mdx-js/react": "^2.1.5",
+    "@heroicons/react": "^2.0.13",
+    "@mapbox/rehype-prism": "^0.8.0",
     "@next/mdx": "^13.0.4",
     "@oscarnewman/twist": "^0.0.2",
     "classnames": "^2.2.6",
+    "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
+    "fast-glob": "^3.2.12",
+    "fathom-client": "^3.5.0",
+    "focus-visible": "^5.2.0",
     "gray-matter": "^4.0.3",
     "next": "^13.0.4",
     "next-ga": "^2.3.4",
@@ -21,9 +25,12 @@
     "next-seo": "^5.14.1",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^2.1.5",
+    "@mdx-js/react": "^2.1.5",
     "@tailwindcss/custom-forms": "tailwindcss/custom-forms",
     "@tailwindcss/typography": "^0.5.8",
     "@types/classnames": "^2.3.1",
@@ -44,6 +51,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.21.5",
     "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-focus-visible": "^7.1.0",
     "postcss-preset-env": "^7.8.3",
     "prettier": "^2.1.2",
     "styled-jsx-plugin-postcss": "^4.0.1",

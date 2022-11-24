@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { Page } from '~/components/Layout/Page'
+import { ModeToggle } from '~/components/ModeToggle'
 import { Project } from '~/components/Project'
 import { H1, H5, P } from '~/components/Typography'
 import { Link } from '~/components/Typography/Link'
@@ -36,7 +37,6 @@ export default function Home() {
         </div>
 
         <Projects />
-        <CourseWork />
       </div>
     </Page>
   )
@@ -53,24 +53,6 @@ const LinkListSection = ({
     <H5>{title}</H5>
     <div className="space-y-6">{children}</div>
   </div>
-)
-
-const CourseWork = () => (
-  <LinkListSection title="Course Work">
-    <Project
-      title="DinoCodes | Highly Secure QR Codes "
-      description="A secure type of scannable code that embeds time, identity, and location. Perfect for secure applications like ticketing and location verification."
-      link="https://dino-demo.now.sh"
-      course="CS 1430 Computer Vision"
-    />
-
-    <Project
-      title="KoalaNet | Deep Learning Night Vision"
-      description="A PyTorch re-implementation of a convolution's autoencoder to re-expose near-black images, trained on GCP for 40 hours. Adapted from Learning to See In The Dark (Chen et al. 2018)."
-      link="https://github.com/oscarnewman/KoalaNet"
-      course="CS 1420 Deep Learning"
-    />
-  </LinkListSection>
 )
 
 const Projects = () => (

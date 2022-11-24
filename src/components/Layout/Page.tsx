@@ -17,9 +17,9 @@ export function Page({ children, withHeader = false }) {
 const PageContainer = ({ children }) => (
   <div
     className={cn(
-      'transition-all duration-150 container max-w-xl',
+      'transition-all duration-150 container',
       'flex flex-col justify-start items-center h-full',
-      'px-6 md:px-0',
+      'container',
     )}
   >
     {children}
