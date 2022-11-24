@@ -42,7 +42,7 @@ function Articles({ articles }: Props) {
             Notes to self
           </h1>
           <p className="">
-            A public notebook of tricks I've learned and solutions I've found.
+            A public notebook of tricks, solutions, and patterns I like.
           </p>
         </header>
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
