@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { NextSeo } from 'next-seo'
 import { ReactNode } from 'react'
 import Nav from '~/components/Nav'
@@ -11,7 +12,7 @@ type Props = {
 
 export function ArticleLayout({ children, meta }: Props) {
   return (
-    <div>
+    <div className="bg-amber-50/50 dark:bg-stone-900 text-amber-900 dark:text-amber-100">
       <Nav />
 
       <div className="flex-1 container py-12">
@@ -30,19 +31,27 @@ export function ArticleLayout({ children, meta }: Props) {
           canonical={`https://oscarnewman.me/posts/${meta.slug}`}
         />
         <article>
-          <header className="flex flex-col">
-            <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <header className="flex flex-col space-y-4">
+            <h1 className="font-serif text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-100 sm:text-4xl">
               {meta.title}
             </h1>
             <time
               dateTime={meta.date}
-              className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+              className="flex items-center text-base text-amber-900 dark:text-stone-500"
             >
-              <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-              <span className="ml-3">{formatDate(meta.date)}</span>
+              <span className="">{formatDate(meta.date)}</span>
             </time>
           </header>
-          <div className="prose dark:prose-invert mt-8">{children}</div>
+          <div
+            className={clsx(
+              'prose text-amber-900',
+              ' prose-code:text-amber-900 prose-pre:bg-stone-900',
+              'dark:text-amber-100 dark:prose-code:text-amber-300 dark:prose-pre:bg-black',
+              'font-serif dark:prose-invert mt-8',
+            )}
+          >
+            {children}
+          </div>
         </article>
       </div>
     </div>
