@@ -11,7 +11,7 @@ export default <NextSeoProps>{
     site_name: 'Oscar Newman',
   },
   twitter: {
-    handle: '@_oscarnewman',
+    handle: '@__oscarnewman',
     cardType: 'summary',
   },
 }

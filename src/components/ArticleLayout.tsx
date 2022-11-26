@@ -24,6 +24,7 @@ export function ArticleLayout({ children, meta }: Props) {
               authors: ['Oscar Newman'],
               publishedTime: meta.date,
             },
+            images: [],
             description: meta.description,
             siteName: 'Oscar Newman',
             url: `https://oscarnewman.me/articles/${meta.slug}`,
